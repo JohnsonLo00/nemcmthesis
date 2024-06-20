@@ -1,0 +1,81 @@
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{nemcmthesis}
+
+
+% --------------- 添加批注 --------------- %
+\let\comment\undefined
+\usepackage[]{changes}
+\definechangesauthor[name={队员1}, color=blue]{队员1} %创建批2注者信息
+\definechangesauthor[name={队员2}, color=gray]{队员2} %创建批注者信息
+\definechangesauthor[name={队员3}, color=red]{队员3} %创建批注者信息
+% ======================================== %
+
+
+% -------------------- 填写论文信息 -------------------- %
+\ttle{这是论文题目} %【论文题目】(《通知》要求：论文题目直接用竞赛试题的标题，不要自行拟定.)
+\category{研究生/本科生/专科生} %【参赛组别】
+\school{某某某某大学} %【参赛学校】
+\tihao{A/B/C/D} %【参赛题号】
+\membera{队员1} %【队员1姓名】
+\memberb{队员2} %【队员2姓名】
+\memberc{队员3} %【队员3姓名】
+\phonea{12377778900} %【队员1联系电话】
+\phoneb{13477778900} %【队员2联系电话】
+\phonec{14577778900} %【队员3联系电话】
+\supervisor{教师组} %【指导教师姓名】
+% ================================================== %
+
+
+% ---------- 可以在此处添加：新加入的宏包、自定义的命令 ---------- %
+
+% ============================================================ %
+
+
+\begin{document}
+
+\makecoverpage % 添加封面页. 注释该命令即可暂时删去封面页
+
+
+% ---------- 摘要页 ---------- %
+\begin{abstract}
+{\zihao{-4}
+\input{mainbody/aabstract}
+}
+\end{abstract}
+\newpage
+% ================================================== %	
+
+
+% ---------- markup列表 ---------- %
+%\listofchanges
+% ================================================== %	
+
+
+% ---------- 正文（划分为多个独立文件依次导入） ---------- %
+\input{mainbody/ch1} \vspace*{0pt} %\vspace*{0pt}的添加解决了章节标题前间距不合理的问题
+\input{mainbody/ch2} \vspace*{0pt}
+\input{mainbody/ch3} \vspace*{0pt}
+\input{mainbody/ch4} \vspace*{0pt}
+\input{mainbody/ch5} \vspace*{0pt}
+\input{mainbody/ch6} \vspace*{0pt}
+\input{mainbody/ch7} \vspace*{0pt}
+\input{mainbody/ch8}
+% ================================================== %
+
+
+% ---------- 参考文献 ---------- %
+\newpage
+\bibliography{refs} %bib文件导入的形式生成参考文献列表
+%\begin{thebibliography}{100}
+%\bibitem{文献x标签}文献x信息
+%\end{thebibliography}
+% ================================================== %
+
+
+% ---------- 附录 ---------- %
+\input{mainbody/appendiceS}
+% ================================================== %
+
+
+\end{document} 
