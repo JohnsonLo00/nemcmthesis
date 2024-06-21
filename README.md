@@ -43,7 +43,7 @@ nemcmthesis(**Thesis** Template for **N**orth**e**astern-Three-Provinces **M**at
 
 -   [Gitee](https://gitee.com/jhonson-lo/nemcmthesis)
 
--   [Overleaf]()
+-   [Overleaf](https://www.overleaf.com/latex/templates/nemcmthesis-thesis-latex-template-for-northeastern-three-provinces-mathematical-contest-in-modeling/sgjxtcwrgthf)
 
 ## 模板运行前的配置
 
