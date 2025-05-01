@@ -35,32 +35,32 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax %【这句万万不可改动】
-\LoadClass[a4paper, 12pt]{article} %【导入正规文档类】
+\LoadClass[a4paper]{article} %【导入正规文档类】
 % ======================================== %
 
 
 % --------------- ctex宏集设置 --------------- %
-\RequirePackage[UTF8, heading=true, zihao = -4]{ctex}
+\RequirePackage[UTF8, heading=true, zihao = -4, sub3section]{ctex}
 \ctexset{
   abstractname = {\zihao{4}摘~ 要},
   bibname = \hfill{\zihao{4}参~ 考~ 文~ 献}\hfill,
   section = {
-    format = {\centering\zihao{4}\bfseries},
+    format = {\centering\bfseries},
     name = {,、},
     number = \chinese{section},
-    beforeskip=15pt,
-    afterskip=10pt,
+    beforeskip=15bp,
+    afterskip=10bp,
     aftername={},
   },
   subsection={
-    format={\zihao{-4}\bfseries},
-	beforeskip=15pt,
-    afterskip=10pt,
+    format={\bfseries},
+    beforeskip=15bp,
+    afterskip=10bp,
   },
   subsubsection={
-    format={\zihao{-4}\bfseries},
-	beforeskip=15pt,
-    afterskip=10pt,
+    format={\bfseries},
+    beforeskip=15bp,
+    afterskip=10bp,
   }
 }
 % ======================================== %
@@ -201,18 +201,6 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 
 % --------------- 标题样式：章、节、条、款、项 --------------- %
 \RequirePackage{titlesec}
-\setcounter{secnumdepth}{4}
-\setcounter{tocdepth}{4}
-\titleformat{\paragraph}
-  {\normalsize\bfseries} %字体
-  {\theparagraph} %标题前的标签
-  {1em} %标题和标签之间的间距
-  {} %标题前没有额外的命令或内容
-\titlespacing{\paragraph}
-  {0pt} %标题左间距
-  {0.5ex \@plus 1ex \@minus.2ex} %标题上间距
-  {0.5ex \@plus .2ex} %标题下间距
-\newcommand{\fourthsection}[1]{\paragraph{#1}} %将命令\paragraph改名为四级标题
 % ======================================== %
 
 
@@ -406,7 +394,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \AddToHook{env/appendices/begin}[style_in_appendix]{
   \ctexset{
     section = {
-      format = {\zihao{4}\bfseries},
+      format = {\bfseries},
       name = {附录~,},
       number = {\arabic{section}},
       aftername = {\hspace{1em}},
