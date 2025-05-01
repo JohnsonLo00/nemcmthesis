@@ -363,31 +363,26 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % --------------- 对sty,cls的命令的定制 --------------- %
 \RequirePackage{etoolbox}
 
-\apptocmd{\makecoverpage}{
-\pagestyle{plain} %摘要页设置为无页眉、有页脚的模式
-\pagenumbering{arabic} %从摘要页开始计数，且设为阿拉伯数字页码
-%% ----- 正文行距 ----- %
-% 关键系数k(基础行距换算系数)：1.296875/1.2
-% 实际的伸缩因子：
-% 1.25倍行距: 1.25*k =[approximately]= 1.35
-\linespread{1.35}\selectfont
-%% ==================== %
-}{\typeout{succeeds: edit the style of page using package etoolbox}}{\PackageError{fails: edit the style of page using package etoolbox}}
-
-\BeforeBeginEnvironment{abstract}{
-\begin{center}
-{\bf\zihao{4}\ttleinMAINBODY}
-\end{center}
+\AddToHook{cmd/makecoverpage/after}{
+  \pagestyle{plain} %摘要页设置为无页眉、有页脚的模式
+  \pagenumbering{arabic} %从摘要页开始计数，且设为阿拉伯数字页码
+  %% ----- 正文行距 ----- %
+  % 关键系数k(基础行距换算系数)：1.296875/1.2
+  % 实际的伸缩因子：
+  % 1.25倍行距: 1.25*k =[approximately]= 1.35
+  \linespread{1.35}\selectfont
+  %% ==================== %
+}
+\AddToHook{env/abstract/before}{
+  \begin{center}
+    {\bfseries\zihao{4}\ttleinMAINBODY}
+  \end{center}
 }
 
-\pretocmd{\bibliography}{
-\addcontentsline{toc}{section}{参~ 考~ 文~ 献} %不能放在导言区
-\vspace*{0pt}
-}{\typeout{succeeds: edit the style of the part of bibliography using package etoolbox}}{\PackageError{fails: edit the style of the part of bibliography using package etoolbox}}
-
-\apptocmd{\bibliography}{
-\vspace*{0pt}
-}{\typeout{succeeds: edit the flexible spacing after the part of bibliography using package etoolbox}}{\PackageError{fails: edit the flexible spacing after the part of bibliography using package etoolbox}}
+\AddToHook{env/thebibliography/before}{
+  \phantomsection
+  \addcontentsline{toc}{section}{参考文献}
+}
 
 %% ------- 设置附录样式 --------- %
 \AddToHook{env/appendices/begin}[style_in_appendix]{
