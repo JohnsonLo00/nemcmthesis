@@ -47,7 +47,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
   section = {
     format = {\centering\zihao{4}\bfseries},
     name = {,、},
-    number = \zhnumber{\thesection},
+    number = \chinese{section},
     beforeskip=15pt,
     afterskip=10pt,
     aftername={},
@@ -237,17 +237,11 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 
 % --------------- 附录与自定义附录 --------------- %
 \RequirePackage{appendix} %设置附录样式
-
-% 自定义附录章标题、在目录中的样式
-\newcounter{appendixcounting} %定义专属于附录的计数器
-\addtocounter{appendixcounting}{1} %附录标题计数器的初始值设为1
-\newcommand{\appendixsec}[1]{ \zihao{4}{\section*{附录\arabic{appendixcounting}\quad #1}}\addcontentsline{toc}{section}{附录\theappendixcounting\quad #1}\addtocounter{appendixcounting}{1}} %注：一定要先添加到目录、再将计数器值增1
 % ======================================== %
 
 
 % ------------------------- 关于论文信息的全局变量导入 ------------------------- %
 \RequirePackage{ifthen} %【引入条件判断逻辑】
-\RequirePackage{zhnumber} %【中文数字】
 %% -------------------- 图片&表格 -------------------- %
 \RequirePackage{array} %【与表格相关】
 %% ============================================================ %
@@ -373,9 +367,25 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \vspace*{0pt}
 }{\typeout{succeeds: edit the flexible spacing after the part of bibliography using package etoolbox}}{\PackageError{fails: edit the flexible spacing after the part of bibliography using package etoolbox}}
 
-\BeforeBeginEnvironment{thebibliography}{
-\vspace*{0pt}
+%% ------- 设置附录样式 --------- %
+\AddToHook{env/appendices/begin}[style_in_appendix]{
+  \ctexset{
+    section = {
+      format = {\zihao{4}\bfseries},
+      name = {附录~,},
+      number = {\arabic{section}},
+      aftername = {\hspace{1em}},
+      beforeskip=0.5ex,
+      afterskip=0.5ex,
+    }
+  }
+  \zihao{5}
 }
+\AddToHook{env/appendices/after}{
+  \RemoveFromHook{env/appendices/begin}[style_in_appendix]
+}
+%% ============================= %
+
 % ======================================== %
 
 
