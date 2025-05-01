@@ -221,8 +221,6 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \DeclareCaptionLabelSeparator{doublespace}{~~}
 \captionsetup{font=small, labelsep=doublespace, labelfont=bf, textfont=bf}
 \RequirePackage[labelformat=brace]{subcaption} %(与 subfigure 宏包冲突)也能提供 subfigure 环境（需设置宽度），并使环境中的标题变成副标题样式
-\numberwithin{figure}{section} %numberwithin命令必须放在amsmath宏包之后
-\numberwithin{table}{section}
 % ======================================== %
 
 
