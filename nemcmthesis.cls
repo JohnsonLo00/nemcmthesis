@@ -16,7 +16,7 @@
 
 % --------------- 全局设置 --------------- %
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{nemcmthesis}[2024/06/10 v1.0 Unofficial LaTeX Template for Northeastern-Three-Provinces Mathematical Contest in Modeling]
+\ProvidesClass{nemcmthesis}[2025/05/01 v2.0.0 Unofficial LaTeX Template for Northeastern-Three-Provinces Mathematical Contest in Modeling]
 % ======================================== %
 
 
@@ -369,8 +369,8 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
   %% ----- 正文行距 ----- %
   % 关键系数k(基础行距换算系数)：1.296875/1.2
   % 实际的伸缩因子：
-  % 1.25倍行距: 1.25*k =[approximately]= 1.35
-  \linespread{1.35}\selectfont
+  % 1.2倍行距: 1.2*k =[approximately]= 1.297
+  \linespread{1.297}\selectfont
   %% ==================== %
 }
 \AddToHook{env/abstract/before}{

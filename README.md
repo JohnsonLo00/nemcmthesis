@@ -1,66 +1,50 @@
 
-nemcmthesis
-===
-**2024年东北三省数学建模联赛论文模板**
+# nemcmthesis
+
+**东北三省数学建模联赛论文模板**
 
 **JL**, [yhlaozero2@163.com](yhlaozero2@163.com)
-**v1.0(2024/06)**
+**v2.0.0(2025-05-01)**
+
+QQ 交流群：345749407
 
 ***
 
-#### Overview
+## Overview
 
-现发布非官方版2024年东北三省数学建模联赛论文模板。本模板参照《关于2024年东北三省数学建模联赛有关事项的通知》《全国大学生数学建模竞赛论文格式规范（2023）》进行设计，适用于东北三省数学建模联赛论文的编写，也供各位读者研究使用。
+现发布非官方版东北三省数学建模联赛论文模板. 本模板参照《2025 年东北三省数学建模联赛通知》《全国大学生数学建模竞赛论文格式规范（2024）》进行设计，适用于东北三省数学建模联赛论文的编写，也供各位读者研究使用.
 
+## 模板许可说明 
+
+本模板的发布遵守[The LaTeX Project Public License(LPPL)](https://www.latex-project.org/lppl/lppl-1-3c/)。未经允许，禁止任何人将本模板用于商业用途。
 
 ## 模板介绍
 
 nemcmthesis(**Thesis** Template for **N**orth**e**astern-Three-Provinces **M**athematical **C**ontest in **M**odeling)，即2024年东北三省数学建模联赛论文模板，诞生于2024年春天前际、初步成熟于当年夏天。现将本模板发布，为苦于格式调试的参赛者提供多一种选择，尽可能让参赛者**不因为格式问题、“颜值”问题而提前退出竞争**.
 
-本模板尚未完全成熟，仍有诸多需要改进之处. 当读者在使用模板的过程中遇到bug或者格式问题，建议按照如下顺序寻求解决方案：
+nemcmthesis(LaTeX **Thesis** Template for **N**orth**e**astern-Three-Provinces **M**athematical **C**ontest in **M**odeling)，即东北三省数学建模联赛论文模板，诞生于 2024 年春天. 本模板历经不断地改进优化，致力于让参赛者**省去繁琐的格式调试、专注于论文内容的编写**.
 
-1.  查阅文件`gbk_of_nemcmthesis.pdf`；
-2.  查阅相关手册（e.g. texdoc）
-3.  Retrieving on the Internet；
-4.  GitHub：将具体情况说明提交到[Issues](https://github.com/JohnsonLo00/nemcmthesis/issues)；
-5.  联系JL，提供具体情况说明。
+当读者在使用模板的过程中遇到bug或者格式问题，建议按照如下顺序逐步尝试解决问题：
 
-此外，本模板处于受维护状态，下一步大致的更新方向如下：
+1. 自己动手排查；
+2. 查阅文件`gbk_of_nemcmthesis.pdf`；
+3. 将模板升级到最新版本；
+4. 联系模板作者，提供具体情况说明；
+5. 如为语法上的 bug，则将 bug report 提交到[GitHub-Issues](https://github.com/JohnsonLo00/nemcmthesis/issues)或 [Gitee-Issues](https://gitee.com/jhonson-lo/nemcmthesis/issues).
 
-- 完善**原有设计**（结合各位读者提交的具体情况说明，或新发布的格式规范）
-
-在此欢迎各位读者以及开发者献计、参与到本模板的后续开发中！
-
-## 模板许可说明
-
-本模板的发布遵守[The LaTeX Project Public License（LPPL）](https://www.latex-project.org/lppl/lppl-1-3c/)。
 
 ## 模板获取方式
 
-目前可从三个平台上获取到本模板：
+目前可从如下平台获取本模板：
 
--   [GitHub](https://github.com/JohnsonLo00/nemcmthesis)
+-   [GitHub](https://github.com/JohnsonLo00/nemcmthesis) (当前版本：v2.0.0[最新])
 
--   [Gitee](https://gitee.com/jhonson-lo/nemcmthesis)
+-   [Gitee](https://gitee.com/jhonson-lo/nemcmthesis) (当前版本：v2.0.0[最新])
 
--   [Overleaf](https://www.overleaf.com/latex/templates/nemcmthesis-thesis-latex-template-for-northeastern-three-provinces-mathematical-contest-in-modeling/sgjxtcwrgthf)
+-   [Overleaf](https://www.overleaf.com/latex/templates/nemcmthesis-thesis-latex-template-for-northeastern-three-provinces-mathematical-contest-in-modeling/sgjxtcwrgthf) (当前版本：v1.0)
 
-## 模板运行前的配置
+其中，GitHub 与 Gitee 上可在 **Release** 板块获取各版本模板的下载路径；Overleaf 上可通过在模板库中搜索“nemcmthesis”(作者为 JohnsonLo) 来获取模板.
 
-为成功编译出想要的PDF文件，读者的设备需具备如下组件：
-
-- **LaTeX发行版**(相当于源数据包、引擎)：[TeXLive](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/)(for Windows), [MacTeX](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/mac/mactex/)(for MacOS), etc
-- **编辑器**(tex文件的查看、编辑、编译)：[WinEdit](https://www.winedt.com/download.html)(for Windows), [TeXShop](https://pages.uoregon.edu/koch/texshop/)(for MacOS), TeXWorks(一般会随着TeXLive的安装而附带安装), TeXstudio, VSCode, etc
-- **PDF查看器**(查看编辑器编译成功后所得到的PDF文件)：[SumatraPDF](https://www.sumatrapdfreader.org/download-free-pdf-viewer)(for
-    Windows), etc.
-
-JL已通过电脑本地和OverLeaf两种方式成功实现了本模板的使用：
-
-- 电脑本地：Windows10, TeXLive2024, WinEdit/TeXstudio, SumatraPDF
-
-- OverLeaf：普通项目，编译器选择XeLaTeX.
-
-其他的方案组合尚未实践，如遇问题，必要时可提交具体情况说明。
 
 ## 文件组成
 
@@ -74,10 +58,11 @@ figures/ 用于放置图片文件. 需插入论文中的图片可以通过文件
 mainbody/ 用于放置正文各章节的子tex文件. 论文的每个章节均可分为不同的tex文件进行编写，最后再汇总导入一个tex文件中(即文件main.tex)
 - aabstract.tex：摘要
 - chx.tex：第x章
-- appendiceS.tex：附录
-packages/ 用于放置第三方宏包文件. 一部分宏包不跟随LaTeX 发行版下载到本地，因此需要另外导入
-gbk_of_nemcmthesis.pdf：本模板的使用指北
+- appendices.tex：附录
+
+guidebook_of_nemcmthesis.pdf：本模板的使用指北
 nemcmthesis.cls：本模板的文档类文件
+latexmkrc: latexmk配置文件
 LICENSE：The LaTeX Project Public License（LPPL）
 main.tex：中枢tex文件. 聚集各章节的tex文件为一体
 main.pdf：由main.tex编译生成的PDF文档
@@ -85,3 +70,16 @@ refs.bib：参考文献数据库文件. 参考文献列表可以通过bib文件�
 ```
 
 
+## 更新日志
+
+- **v2.0.0, 2025-05-01**
+  - **Added**:
+    - 引入了基于 latexmk 的自动化编译方法
+  - **Changed**:
+    - 删除了 changes 宏包的预设，保留读者使用的自由程度
+    - 删除了部分命令的自定义、重定义，保留读者使用的自由程度
+    - 删除了对列表环境样式的设置，保留读者使用的自由程度
+    - 取消了公式、定理、图表的编号的层级
+- **v1.0, 2024-06-21**
+  - **Added**:
+    - 首次发布本模板
