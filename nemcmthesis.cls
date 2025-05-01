@@ -257,11 +257,11 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 
 
 % --------------- 参考文献 --------------- %
-\RequirePackage[numbers,square,comma]{natbib}
+\RequirePackage[numbers,square,comma,sort&compress]{natbib}
 \RequirePackage{gbt7714}
-\setlength{\bibsep}{0ex}
+\setlength{\bibsep}{0bp}
 \bibliographystyle{gbt7714-numerical}
-\newcommand{\upcite}[1]{$^{\mbox{\footnotesize\cite{#1}}}${}} % 上标形式的引用
+\newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}} % 上标形式的引用
 % ======================================== %
 
 
