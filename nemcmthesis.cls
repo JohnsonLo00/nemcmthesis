@@ -73,8 +73,15 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % ======================================== %
 
 
-% --------------- 页面样式 --------------- %
+% --------------- 颜色定制 --------------- %
 \RequirePackage[table]{xcolor} %颜色定制
+\definecolor{keywordincode}{RGB}{000,000,255}
+\definecolor{stringincode}{RGB}{128,128,000}
+\definecolor{commentincode}{RGB}{106,153,85}
+% ======================================== %
+
+
+% --------------- 页面样式 --------------- %
 \RequirePackage{fancyhdr} %定制页眉页脚
 \RequirePackage{geometry} %定制页面
 \geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm, headsep=0.5cm}
@@ -174,11 +181,14 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
   basicstyle=\small\ttfamily, %整体的字号、字体
   stringstyle=\ttfamily, %字符串样式
   backgroundcolor=\color{gray!10}, %背景颜色
-  frame=trbl, %显示各方向的代码框线条
-  frameround=tttt, %设置代码框各棱角的形状
   breaklines=true, %自动断行
   showstringspaces=false, %取消特别的字符间距
-  framexleftmargin=5pt, %内部左边距
+  framexleftmargin=5bp, %内部左边距
+  frame=trbl, %显示各方向的代码框线条
+  frameround=tttt, %设置代码框各棱角的形状
+  keywordstyle=\color{keywordincode}, %关键字样式
+  stringstyle=\color{stringincode}, %字符串样式
+  commentstyle=\color{commentincode}, %注释样式
 }
 % ======================================== %
 
