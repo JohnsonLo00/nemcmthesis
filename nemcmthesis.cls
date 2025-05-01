@@ -128,34 +128,40 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 
 % --------------- 数学环境 --------------- %
 \RequirePackage{amsmath, amssymb, mathrsfs} %数学公式三件套
-\numberwithin{equation}{section} %将一级章节编号添加到公式编号
 \RequirePackage{siunitx} %SI制单位
-\newcommand\bk{\boldsymbol}
-\newcommand\lt{\left}
-\newcommand\rt{\right}
 \DeclareMathOperator{\diff}{\,\mathrm{d}\hspace{-1.5pt}} %微分算子
-\newcommand\bfunit[1]{\unit{\bf{#1}}} %加粗的数值单位
 
 \RequirePackage{amsthm}
+
+\renewcommand{\proofname}{证明}
+\renewenvironment{proof}[1][\proofname]{\par
+\pushQED{\qed}%
+\normalfont \topsep6\p@\@plus6\p@\relax
+\trivlist
+\item\relax
+{\hspace{\parindent}\rmfamily\bfseries #1\@addpunct{:}}\hspace\labelsep\ignorespaces
+}{%
+\popQED\endtrivlist\@endpefalse
+}
+
 \newtheoremstyle{newthmstyle}
-  {3pt} %Space above
-  {3pt} %Space below
-  {\rm} %Body font
+  {3bp} %Space above
+  {3bp} %Space below
+  {\rmfamily} %Body font
   {\parindent} %Indent amount
-  {\bf} %Theorem head font
+  {\bfseries} %Theorem head font
   {} %Punctuation after theorem head
   {1.0em} %Space after theorem head
   {} %Theorem head spec (can be left empty, meaning ‘normal’)
 \theoremstyle{newthmstyle}
-\newtheorem{Definition}{定义}[section]
-\newtheorem{Proposition}{命题}[section]
-\newtheorem{Lemma}{引理}[section]
-\newtheorem{Theorem}{定理}[section]
-\newtheorem{Example}{例}[section]
-\newtheorem{Problem}{问题}[section]
-\newtheorem{Corollary}{推论}[section]
-\newtheorem{Remark}{注}[section]
-\renewcommand{\proofname}{\zihao{-4}\bfseries 证明}
+\newtheorem{Definition}{定义}
+\newtheorem{Proposition}{命题}
+\newtheorem{Lemma}{引理}
+\newtheorem{Theorem}{定理}
+\newtheorem{Example}{例}
+\newtheorem{Problem}{问题}
+\newtheorem{Corollary}{推论}
+\newtheorem{Remark}{注}
 % ======================================== %
 
 
