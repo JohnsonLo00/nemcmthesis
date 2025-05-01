@@ -379,7 +379,12 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \apptocmd{\makecoverpage}{
 \pagestyle{plain} %摘要页设置为无页眉、有页脚的模式
 \pagenumbering{arabic} %从摘要页开始计数，且设为阿拉伯数字页码
-\renewcommand{\baselinestretch}{1.25}
+%% ----- 正文行距 ----- %
+% 关键系数k(基础行距换算系数)：1.296875/1.2
+% 实际的伸缩因子：
+% 1.25倍行距: 1.25*k =[approximately]= 1.35
+\linespread{1.35}\selectfont
+%% ==================== %
 }{\typeout{succeeds: edit the style of page using package etoolbox}}{\PackageError{fails: edit the style of page using package etoolbox}}
 
 \BeforeBeginEnvironment{abstract}{
