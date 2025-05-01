@@ -40,7 +40,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 
 
 % --------------- ctex宏集设置 --------------- %
-\RequirePackage[UTF8, heading=true, zihao = -4, sub3section]{ctex}
+\RequirePackage[UTF8, heading=true, zihao = -4]{ctex}
 \ctexset{
   abstractname = {\zihao{4}摘~ 要},
   bibname = \hfill{\zihao{4}参~ 考~ 文~ 献}\hfill,
