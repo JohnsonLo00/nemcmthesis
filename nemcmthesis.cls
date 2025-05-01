@@ -123,7 +123,6 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 
 % --------------- 列表环境 --------------- %
 \RequirePackage[inline]{enumitem}
-\setlist{leftmargin=0pt, itemindent=2\parindent, itemsep=0pt, parsep=0pt}
 % ======================================== %
 
 
