@@ -91,7 +91,24 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 
 % --------------- 字体 --------------- %
 \RequirePackage{fontspec}
-\setmainfont{Times New Roman} %英文字体设置
+%% --------- 英文字体设置 ----------- %
+\IfFontExistsTF{Times New Roman}{
+    \setmainfont{Times New Roman}
+  }{
+    \IfFontExistsTF{./misc/times.ttf}{
+      \setmainfont{times}[
+        Path={./misc/},
+        Extension = .ttf,
+        UprightFont = times,
+        BoldFont = timesbd,
+        ItalicFont = timesi,
+        BoldItalicFont = timesbi,
+      ]
+    }{
+      \setmainfont{TeX Gyre Termes} %发行版内置字体
+    }
+  }
+%% ================================== %
 % ======================================== %
 
 
