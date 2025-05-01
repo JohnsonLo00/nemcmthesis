@@ -279,7 +279,6 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \newcommand{\nemcmthesis@tokens@supervisor}{~} %【指导教师】
 %% ============================================================ %
 
-
 %% -------------------- 正式变量定义 -------------------- %
 \newcommand{\ttle}[1]{\renewcommand{\ttleinMAINBODY}{#1}} %【论文题目】
 \newcommand{\school}[1]{\renewcommand{\nemcmthesis@tokens@school}{#1}} %【参赛学校】
