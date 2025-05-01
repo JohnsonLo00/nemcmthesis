@@ -99,7 +99,8 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \RequirePackage{abstract}
 \setlength{\absleftindent}{0pt} %取消左自动缩进
 \setlength{\absrightindent}{0pt} %取消右自动缩进
-\newcommand{\keywords}[1]{\vspace{\baselineskip}{}\noindent\bf 关键词: #1} %插入关键词
+\renewcommand{\abstracttextfont}{\normalsize} %修改摘要内容的字号
+\newcommand{\keywords}[1]{\vspace{\baselineskip}{}\noindent\bfseries 关键词: #1} %插入关键词
 % ======================================== %
 
 
