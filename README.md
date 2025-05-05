@@ -20,8 +20,6 @@ QQ 交流群：345749407
 
 ## 模板介绍
 
-nemcmthesis(**Thesis** Template for **N**orth**e**astern-Three-Provinces **M**athematical **C**ontest in **M**odeling)，即2024年东北三省数学建模联赛论文模板，诞生于2024年春天前际、初步成熟于当年夏天。现将本模板发布，为苦于格式调试的参赛者提供多一种选择，尽可能让参赛者**不因为格式问题、“颜值”问题而提前退出竞争**.
-
 nemcmthesis(LaTeX **Thesis** Template for **N**orth**e**astern-Three-Provinces **M**athematical **C**ontest in **M**odeling)，即东北三省数学建模联赛论文模板，诞生于 2024 年春天. 本模板历经不断地改进优化，致力于让参赛者**省去繁琐的格式调试、专注于论文内容的编写**.
 
 当读者在使用模板的过程中遇到bug或者格式问题，建议按照如下顺序逐步尝试解决问题：
